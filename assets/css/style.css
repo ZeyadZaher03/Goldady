@@ -427,9 +427,15 @@ section:nth-child(odd) {
 
 
 @media only screen and (max-width:1024px) {
+
+    .header {
+        height: 97vh;
+    }
+
     .header .hero-heading {
-        top: 74%;
-        left: 5%;
+        top: 74% !important;
+        left: 5% !important;
+        font-size: 4rem !important;
     }
 
     section {
@@ -469,6 +475,7 @@ section:nth-child(odd) {
         flex-direction: column-reverse;
         align-items: baseline;
         margin-top: .5rem;
+        padding: 0 2px;
     }
 
     .registeration_box-remberme {
