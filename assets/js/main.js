@@ -9,9 +9,3 @@ const toggleHideAndShow = (btn, container, className, callback) => {
     containerItem.classList.toggle(className);
   });
 };
-
-toggleHideAndShow(
-  "#registration_btn",
-  ".registeration_box",
-  "registeration_box--vis"
-);

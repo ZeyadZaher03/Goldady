@@ -8,14 +8,13 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon"
-          href="assets/images/logos/Goldady-logo.png"
+          href="assets/images/logos/logo.png"
           type="image/x-icon">
     <title>GOLDADY</title>
 
     <!-- ==== js ==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-    <script defer
-            src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <!-- ==== font awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
@@ -98,7 +97,8 @@
         <i class="see_more_header fas fa-chevron-down"></i>
     </header>
 
-    <section data-aos="fade-up"
+    <section class="section"
+             data-aos="fade-up"
              data-aos-offset="200"
              data-aos-duration="1000"
              data-aos-easing="ease-in-out"
@@ -112,7 +112,7 @@
            href="#">Connect With Us</a>
     </section>
 
-    <section class="mobile_app-section">
+    <section class="section mobile_app-section">
         <div class="mobile_app-heading"
              data-aos="fade-right"
              data-aos-offset="200"
@@ -129,7 +129,8 @@
         </div>
     </section>
 
-    <section data-aos="fade-right"
+    <section class="section"
+             data-aos="fade-right"
              data-aos-offset="200"
              data-aos-duration="1000"
              data-aos-easing="ease-in-out"
@@ -162,6 +163,11 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+        toggleHideAndShow(
+            "#registration_btn",
+            ".registeration_box",
+            "registeration_box--vis"
+        );
     </script>
 </body>
 
