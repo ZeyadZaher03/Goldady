@@ -1367,6 +1367,30 @@ b {
     margin-left: 1rem;
 }
 
+.buy-sell-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 1rem;
+}
+
+.order-board_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.search_bar_res {
+    display: none;
+}
+
+.fund_transfer_container {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-width:1000px) {
     .buy-sell {
         grid-template-columns: 1fr;
@@ -1386,5 +1410,86 @@ b {
 
     #myChart1 {
         width: 100%;
+    }
+
+    .buy-sell-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .dashboard-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation_item-search-container {
+        display: none;
+    }
+
+    .order_box {
+        padding: 10px 5px !important;
+    }
+
+    .portfolio_value-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .portfolio_value-container .gold-separate {
+        display: none;
+    }
+
+    .order_container {
+        height: auto;
+        overflow: auto;
+    }
+
+    .transaction_values_container,
+    .portfolio_values_container {
+        justify-items: flex-end;
+    }
+
+    .transaction_values_container,
+    .transaction_value--heading_container,
+    .portfolio_value--heading_container,
+    .portfolio_values_container {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr !important;
+        grid-gap: 1rem !important;
+    }
+
+    .portfolio_container {
+        flex-direction: column;
+    }
+
+    .loan_order_container {
+        grid-template-columns: 1fr;
+    }
+
+    .total_trans {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard_nav {
+        flex-wrap: wrap;
+    }
+
+    .search_bar_res {
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+        flex-basis: 100%;
+    }
+
+    .search_bar_res .navigation_item-search-container {
+        display: flex !important;
+    }
+
+    .navigation_item-search-button {
+        white-space: nowrap;
+        padding: .5rem 1rem;
+        display: inline-block;
     }
 }
