@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==== general ==== -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+          href="assets/images/logos/logo.png"
+          type="image/x-icon">
+    <title>GOLDADY -Dashboard</title>
+
+    <!-- ==== js ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script defer
+            src="assets/js/main.js"></script>
+
+    <!-- ==== font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+            integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+            crossorigin="anonymous"></script>
+
+    <!-- ==== bootstrap ==== -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+    <!-- ==== AOS ==== -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- ==== fonts ==== -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ==== css ==== -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet"
+          href="/assets/css/style.css">
+
+</head>
+
+<body class="dashboard-body">
+    <nav class="dashboard_nav">
+        <div class="navigation_item">
+            <div class="navigation_item-logo">
+                <img src="assets/images/logos/Goldady-logo.png"
+                     alt="Goldady">
+            </div>
+            <div class="navigation_item-info">
+                <p class="navigation_item-page-name">My Dashboard</p> <span class="gold-separate"></span>
+                <p class="navigation_item-date">01/01/2020</p>
+            </div>
+            <div class="navigation_item-search-container">
+                <input class="navigation_item-search-input"
+                       type="text"
+                       name="search">
+                <button class="navigation_item-search-button">
+                    Advanced Search
+                </button>
+            </div>
+        </div>
+        <div class="navigation_item">
+            <div class="navigation_item-add"><i class="fas fa-plus"></i></div>
+            <span class="gold-separate"></span>
+            <div class="navigation_item-profile-container">
+                <img src="assets/images/avatar.png"
+                     alt="avatar">
+            </div>
+            <div id="registration_btn"
+                 class="navigation_menu">
+                <div class="navigation_menu-item"></div>
+            </div>
+        </div>
+        <div class="search_bar_res">
+            <div class="navigation_item-search-container">
+                <input class="navigation_item-search-input"
+                       type="text"
+                       name="search">
+                <button class="navigation_item-search-button">
+                    Advanced Search
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main_dashboard">
+        <div class="box buy-sell">
+            <div class="box_contaier account-balance dashboard_col">
+                <h2 class="dashboard_heading">Account Balance</h2>
+                <div class="dashboard_col-body">
+                    <div class="account-balance-heading-summary border-dotted flex space-between">
+                        <span class="light-text">Summary</span>
+                        <span class="light-text">Valuation</span>
+                    </div>
+                    <div class="account-balance-heading-summary flex space-between">
+                        <span class="light-text light-text--bold">Total</span>
+                        <span class="dashboard_heading--big">$23,758</span>
+                    </div>
+                    <canvas class="border-dotted--gold margin-bottom-l chart"
+                            id="myChart"></canvas>
+                    <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var chart = new Chart(ctx, {
+                            type: 'line',
+
+                            data: {
+                                labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+                                datasets: [{
+                                    label: "5 Days",
+                                    borderColor: '#b3892e',
+                                    data: [26.4, 39.8, 66.8, 66.4, 40.6, 55.2, 77.4, 69.8, 57.8, 76, 110.8, 142.6],
+                                }]
+                            },
+
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                            }
+                        });
+                    </script>
+                    <div class="border-dotted--gold">
+                        <div class="flex space-between">
+                            <p>NET</p>
+                            <p class="gold">1000$</p>
+                        </div>
+                        <div class="flex space-between">
+                            <p>NET</p>
+                            <p class="gold">1000$</p>
+                        </div>
+                        <div class="flex space-between">
+                            <p>NET</p>
+                            <p class="gold">1000$</p>
+                        </div>
+                        <div class="flex space-between">
+                            <p>NET</p>
+                            <p class="gold">1000$</p>
+                        </div>
+                    </div>
+                    <div class="fund_transfer_container">
+                        <a class="dashboard_button dashboard_button--gold">Fund Transfer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box_contaier">
+                <h2 class="dashboard_heading margin-bottom-b">BUY/SELL</h2>
+                <div class="buy-sell-container">
+                    <div class="dashboard_col">
+                        <h2 class="dashboard_heading dashboard_heading--gold">Goldady Wizard</h2>
+                        <div class="goldady-wizard dashboard_col-body">
+                            <div class="margin-bottom-l border_container-box">
+                                <h2 class="dashboard_heading dashboard_heading--border-gold margin-bottom-b">BUY</h2>
+
+                                <div class="sell-buy-input_container">
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label"
+                                               for="">Bullion</label>
+                                        <input class="dashboard_input"
+                                               type="text">
+                                    </div>
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label"
+                                               for="">Order Size</label>
+                                        <input class="dashboard_input"
+                                               type="text">
+                                        <span class="dashboard_input-aside-text">gm</span>
+                                    </div>
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label"
+                                               for="">Price/Ounce</label>
+                                        <input class="dashboard_input"
+                                               type="text">
+                                        <span class="dashboard_input-aside-text">USD</span>
+                                    </div>
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label green"
+                                               for=""><i class="fas fa-arrow-up"></i> 1267</label>
+                                        <input class="dashboard_button dashboard_button--success"
+                                               type="submit"
+                                               value="PLACE BUY ORDER">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border_container-box">
+                                <h2 class="dashboard_heading dashboard_heading--border-gold margin-bottom-b">SELL</h2>
+
+                                <div class="sell-buy-input_container">
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label"
+                                               for="">Bullion</label>
+                                        <input class="dashboard_input"
+                                               type="text">
+                                    </div>
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label"
+                                               for="">Order Size</label>
+                                        <input class="dashboard_input"
+                                               type="text">
+                                        <span class="dashboard_input-aside-text">gm</span>
+                                    </div>
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label"
+                                               for="">Price/Ounce</label>
+                                        <input class="dashboard_input"
+                                               type="text">
+                                        <span class="dashboard_input-aside-text">USD</span>
+                                    </div>
+                                    <div class="dashboard_inputContainer">
+                                        <label class="dashboard_label red"
+                                               for=""><i class="fas fa-arrow-up"></i> 1267</label>
+                                        <input class="dashboard_button dashboard_button--fail"
+                                               type="submit"
+                                               value="PLACE SELL ORDER">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard_col">
+                        <h2 class="dashboard_heading dashboard_heading--gold">Order Board</h2>
+                        <div class="dashboard_col-body">
+                            <div class="border_container-box">
+                                <div class="order-board_container order_container">
+                                    <div>
+                                        <h2 class="dashboard_heading dashboard_heading--small-center">Currency</h2>
+                                        <div class="order_box">
+                                            <p class="order-text">USD</p>
+                                            <p class="order-text">EGP</p>
+                                            <p class="order-text">AED</p>
+                                            <p class="order-text">SAR</p>
+                                            <p class="order-text">EGP</p>
+                                            <p class="order-text">AED</p>
+                                            <p class="order-text">SAR</p>
+                                            <p class="order-text">USD</p>
+                                            <p class="order-text">EGP</p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h2 class="dashboard_heading dashboard_heading--small-center">Bids</h2>
+                                        <div class="order_box order_box--center">
+                                            <div class="order_box-value">
+                                                <p class="order-text">13 </p>
+                                                <p class="gold">54 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">54 </p>
+                                                <p class="gold">12 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">51 </p>
+                                                <p class="gold">45 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">64 </p>
+                                                <p class="gold">89 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">23 </p>
+                                                <p class="gold">52 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">356 </p>
+                                                <p class="gold">79 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">98 </p>
+                                                <p class="gold">123 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">58 </p>
+                                                <p class="gold">748 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">422 </p>
+                                                <p class="gold">49 GM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h2 class="dashboard_heading dashboard_heading--small-center">Asks</h2>
+                                        <div class="order_box order_box--center">
+                                            <div class="order_box-value">
+                                                <p class="order-text">13 </p>
+                                                <p class="gold">54 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">54 </p>
+                                                <p class="gold">12 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">51 </p>
+                                                <p class="gold">45 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">64 </p>
+                                                <p class="gold">89 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">23 </p>
+                                                <p class="gold">52 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">356 </p>
+                                                <p class="gold">79 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">98 </p>
+                                                <p class="gold">123 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">58 </p>
+                                                <p class="gold">748 GM</p>
+                                            </div>
+                                            <div class="order_box-value">
+                                                <p class="order-text">422 </p>
+                                                <p class="gold">49 GM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="dashboard_heading dashboard_heading--small">Portfolio</h2>
+                            <div class="flex space-between portfolio_container">
+                                <div class="portfolio_value-container">
+                                    <div class="portfolio_value--heading_container">
+                                        <p class="portfolio_value portfolio_value--heading">Cash Account in $<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Gold Account in grams<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Averge Price/gm<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Price<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Total Cost</p>
+                                    </div>
+                                    <div class="portfolio_values_container">
+                                        <p class="portfolio_value">12</p>
+                                        <p class="portfolio_value">13</p>
+                                        <p class="portfolio_value">121</p>
+                                        <p class="portfolio_value">54</p>
+                                        <p class="portfolio_value">1000</p>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <input class="dashboard_button dashboard_button--gold"
+                                           type="submit"
+                                           value="Fund Account">
+                                </div>
+                            </div>
+                            <h2 class="dashboard_heading dashboard_heading--small">Transaction history</h2>
+                            <div class="portfolio_container">
+                                <div class="portfolio_value-container">
+                                    <div class="transaction_value--heading_container">
+                                        <p class="portfolio_value portfolio_value--heading">Date<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Purchase or Sale<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">in grams<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Price/gm<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Cash<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Amount</p>
+                                    </div>
+                                    <div class="transaction_values_container">
+                                        <p class="portfolio_value">12</p>
+                                        <p class="portfolio_value">13</p>
+                                        <p class="portfolio_value">12</p>
+                                        <p class="portfolio_value">54</p>
+                                        <p class="portfolio_value">1000</p>
+                                        <p class="portfolio_value">121</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="box">
+            <h2 class="dashboard_heading margin-bottom-b">LEND/BORROW</h2>
+            <div class="box_contaier lend-borrow-section">
+                <div class="dashboard_col">
+                    <h2 class="dashboard_heading dashboard_heading--gold">Loan Wizard</h2>
+                    <div class="dashboard_col-body">
+                        <div class="border_container-box">
+                            <div class="loan_container">
+                                <div class="loan_item">
+                                    <div class="loan_heading">
+                                        <p class="green">Lend Securely Against Gold</p>
+                                    </div>
+                                    <div class="loan_content">
+                                        <div class="loan_text_container">
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">Offer Loan</p>
+                                                <p class="loan_text-item">Interest Rate</p>
+                                                <p class="loan_text-item">Tensure</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">$USD</p>
+                                                <p class="loan_text-item">$ per mounth</p>
+                                                <p class="loan_text-item">Months</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">1000$</p>
+                                                <p class="loan_text-item">2%</p>
+                                                <p class="loan_text-item">4</p>
+                                            </div>
+                                        </div>
+                                        <button class="dashboard_button dashboard_button--success">Place Offer</button>
+                                    </div>
+                                </div>
+                                <div class="loan_item">
+                                    <div class="loan_heading">
+                                        <p class="green">Lend Securely Against Gold</p>
+                                    </div>
+                                    <div class="loan_content">
+                                        <div class="loan_text_container">
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">Offer Loan</p>
+                                                <p class="loan_text-item">Interest Rate</p>
+                                                <p class="loan_text-item">Tensure</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">$USD</p>
+                                                <p class="loan_text-item">$ per mounth</p>
+                                                <p class="loan_text-item">Months</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">1000$</p>
+                                                <p class="loan_text-item">2%</p>
+                                                <p class="loan_text-item">4</p>
+                                            </div>
+                                        </div>
+                                        <button class="dashboard_button dashboard_button--success">Place Offer</button>
+                                    </div>
+                                </div>
+                                <div class="loan_item">
+                                    <div class="loan_heading">
+                                        <p class="red">Lend Securely Against Gold</p>
+                                    </div>
+                                    <div class="loan_content">
+                                        <div class="loan_text_container">
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">Offer Loan</p>
+                                                <p class="loan_text-item">Interest Rate</p>
+                                                <p class="loan_text-item">Tensure</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">$USD</p>
+                                                <p class="loan_text-item">$ per mounth</p>
+                                                <p class="loan_text-item">Months</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">1000$</p>
+                                                <p class="loan_text-item">2%</p>
+                                                <p class="loan_text-item">4</p>
+                                            </div>
+                                        </div>
+                                        <button class="dashboard_button dashboard_button--fail">Place Request</button>
+                                    </div>
+                                </div>
+                                <div class="loan_item">
+                                    <div class="loan_heading">
+                                        <p class="red">Lend Securely Against Gold</p>
+                                    </div>
+                                    <div class="loan_content">
+                                        <div class="loan_text_container">
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">Offer Loan</p>
+                                                <p class="loan_text-item">Interest Rate</p>
+                                                <p class="loan_text-item">Tensure</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">$USD</p>
+                                                <p class="loan_text-item">$ per mounth</p>
+                                                <p class="loan_text-item">Months</p>
+                                            </div>
+                                            <div class="loan_text">
+                                                <p class="loan_text-item">1000$</p>
+                                                <p class="loan_text-item">2%</p>
+                                                <p class="loan_text-item">4</p>
+                                            </div>
+                                        </div>
+                                        <button class="dashboard_button dashboard_button--fail">Place Request</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard_col">
+                    <h2 class="dashboard_heading dashboard_heading--gold">Loans Order Board</h2>
+                    <div class="dashboard_col-body loan_order_container">
+                        <div class="offers_box border_container-box">
+                            <h3 class="dashboard_heading dashboard_heading--small-center">Current Lending Offers</h3>
+                            <div class="offers_container">
+                                <div class="offers_heading">
+                                    <div class="flex space-between">
+                                        <p class="gold">$US</p>
+                                        <p class="gold">Playback on</p>
+                                    </div>
+                                    <p class="gold">31 Jan 2020</p>
+                                    <p>There are currently no Borrowing Requests of this currency and duration.</p>
+                                </div>
+                                <div class="offers_content">
+                                    <div class="offers_content-borrow">
+                                        <div class="offers_content-borrow-item">
+                                            <h3 class="dashboard_heading-small red">6M Borrowing Requests</h3>
+                                            <div class="flex space-between">
+                                                <p class="dashboard_heading-small">Interest</p>
+                                                <p class="dashboard_heading-small">USD</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>4.0% p.a.</p>
+                                                <p>$40,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.75% p.a.</p>
+                                                <p>$11,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.5% p.a.</p>
+                                                <p>$28,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="offers_content-borrow-item">
+                                            <h3 class="dashboard_heading-small red">6M Borrowing Requests</h3>
+                                            <div class="flex space-between">
+                                                <p class="dashboard_heading-small">Interest</p>
+                                                <p class="dashboard_heading-small">USD</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>4.0% p.a.</p>
+                                                <p>$40,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.75% p.a.</p>
+                                                <p>$11,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.5% p.a.</p>
+                                                <p>$28,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="offers_content-borrow-item">
+                                            <h3 class="dashboard_heading-small red">6M Borrowing Requests</h3>
+                                            <div class="flex space-between">
+                                                <p class="dashboard_heading-small">Interest</p>
+                                                <p class="dashboard_heading-small">USD</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>4.0% p.a.</p>
+                                                <p>$40,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.75% p.a.</p>
+                                                <p>$11,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.5% p.a.</p>
+                                                <p>$28,000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="offers_content-lend">
+                                        <div class="offers_content-borrow-item">
+                                            <h3 class="dashboard_heading-small green">6M Borrowing Requests</h3>
+                                            <div class="flex space-between">
+                                                <p class="dashboard_heading-small">Interest</p>
+                                                <p class="dashboard_heading-small">USD</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>4.0% p.a.</p>
+                                                <p>$40,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.75% p.a.</p>
+                                                <p>$11,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.5% p.a.</p>
+                                                <p>$28,000</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="offers_content-borrow-item">
+                                            <h3 class="dashboard_heading-small green">6M Borrowing Requests</h3>
+                                            <div class="flex space-between">
+                                                <p class="dashboard_heading-small">Interest</p>
+                                                <p class="dashboard_heading-small">USD</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>4.0% p.a.</p>
+                                                <p>$40,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.75% p.a.</p>
+                                                <p>$11,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.5% p.a.</p>
+                                                <p>$28,000</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="offers_content-borrow-item">
+                                            <h3 class="dashboard_heading-small green">6M Borrowing Requests</h3>
+                                            <div class="flex space-between">
+                                                <p class="dashboard_heading-small">Interest</p>
+                                                <p class="dashboard_heading-small">USD</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>4.0% p.a.</p>
+                                                <p>$40,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.75% p.a.</p>
+                                                <p>$11,000</p>
+                                            </div>
+                                            <div class="flex space-between">
+                                                <p>3.5% p.a.</p>
+                                                <p>$28,000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboard_col-body"></div>
+                        </div>
+                        <div class="border_container-box">
+                            <h3 class="dashboard_heading dashboard_heading--small-center">1 Month Lending Offers</h3>
+                            <div class="offers_container">
+                                <div class="flex space-between">
+                                    <p class="gold">$US</p>
+                                    <p class="gold">Playback on</p>
+                                </div>
+                                <p class="gold">31 Jan 2020</p>
+                                <div class="lending_table">
+                                    <div class="lending_table-heading">
+                                        <p class="dashboard_heading-small">Iterest</p>
+                                        <p class="dashboard_heading-small">Offering</p>
+                                        <p class="dashboard_heading-small">Partial Full</p>
+                                        <button class="dashboard_small_button">view</button>
+                                    </div>
+                                    <div class="lending_table-body">
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                        <div class="lending_table-item">
+                                            <p>2.25% p.a.</p>
+                                            <p>$10,000</p>
+                                            <p>No</p>
+                                            <button class="dashboard_small_button">view</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_contaier graphs">
+                <div class="dashboard_col">
+                    <h2 class="dashboard_heading dashboard_heading--gold">Live Market Board</h2>
+                    <div class="dashboard_col-body">
+                        <canvas id="myChart1"></canvas>
+                        <script>
+                            var ctx = document.getElementById('myChart1').getContext('2d');
+                            var chart = new Chart(ctx, {
+                                type: 'line',
+
+                                data: {
+                                    labels: ["Sep 1", "Sep 2", "Sep 3", "Sep 4", "Sep 5", "Sep 6", "Sep 7", "Sep 8", "Sep 9", "Sep 10"],
+                                    datasets: [{
+                                        label: "5 Days",
+                                        backgroundColor: "#b3892e10",
+                                        borderColor: '#b3892e',
+                                        borderWidth: 1,
+                                        data: [0, 45, 68, 69, 12, 36, 47, 25, 37, 78],
+                                    }]
+                                },
+
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    elements: {
+                                        line: {
+                                            tension: 0
+                                        },
+                                        point: {
+                                            radius: 0
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="dashboard_col">
+                    <h2 class="dashboard_heading dashboard_heading--gold">Transaction History</h2>
+                    <div class="dashboard_col-body">
+                        <div class="total_trans">
+
+                            <div class="chart-container"
+                                 style="position: relative;  width:99% !important; height: 100% !important;">
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                            <script>
+                                var ctx = document.getElementById('myChart2').getContext('2d');
+                                ctx.canvas.parentNode.style.width = '99%';
+                                var chart = new Chart(ctx, {
+                                    type: 'line',
+
+                                    data: {
+                                        labels: ["Sep 1", "Sep 2", "Sep 3", "Sep 4", "Sep 5", "Sep 6", "Sep 7", "Sep 8", "Sep 9", "Sep 10"],
+                                        datasets: [{
+                                            label: "5 Days",
+                                            backgroundColor: "#b3892e10",
+                                            borderColor: '#b3892e',
+                                            borderWidth: 1,
+                                            data: [0, 45, 68, 69, 12, 36, 47, 25, 37, 78],
+                                        }]
+                                    },
+
+                                    options: {
+                                        // responsive: true,
+                                        // maintainAspectRatio: false,
+                                        elements: {
+                                            line: {
+                                                tension: 0.4
+                                            },
+                                            point: {
+                                                radius: 1
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                            <div class="report">
+                                <h3 class="repost_heading">Report</h3>
+                                <div class="report_status">
+                                    <div class="report_status-box report_status-box--profit">
+                                        <h3 class="report_status-heading">Last Week Profite</h3>
+                                        <h1 class="report_number">+29.7%</h1>
+                                        <div class="progress_bar">
+                                            <div class="progress_bar-content progress_bar-content--gain"
+                                                 style="width: 29.7%;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="report_status-box">
+                                        <h3 class="report_status-heading">This Week losses</h3>
+                                        <h1 class="report_number">-19.7%</h1>
+                                        <div class="progress_bar">
+                                            <div class="progress_bar-content progress_bar-content--lose"
+                                                 style="width: 19.7%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="preformance">
+                                    <div class="preformance_box">
+                                        <p class="report_status-heading">performace</p>
+                                        <div class="preformance_number preformance_number--gain">
+                                            +0.5%
+                                        </div>
+                                    </div>
+                                    <div class="preformance_box">
+                                        <a class="button_unique">Download
+                                            <div class="button_unique-icon_container">
+                                                <i class="button_unique-icon fas fa-arrow-down">
+                                                </i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="dashboard_footer">
+        <p>© 2019 Goldady Investments Ltd. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
