@@ -2,84 +2,63 @@
 <html lang="en">
 
 <head>
-
     <!-- ==== general ==== -->
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon"
-          href="assets/images/logos/logo.png"
-          type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logos/logo.png" type="image/x-icon">
     <!-- Primary Meta Tags -->
     <title>Goldady - Dashboard</title>
-    <meta name="title"
-          content="Goldady - Dashboard">
+    <meta name="title" content="Goldady - Dashboard">
     <meta name="description"
-          content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
+        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type"
-          content="website">
-    <meta property="og:url"
-          content="https://goldady.netlify.app/dashboard.html">
-    <meta property="og:title"
-          content="Goldady - Dashboard">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goldady.netlify.app/dashboard.html">
+    <meta property="og:title" content="Goldady - Dashboard">
     <meta property="og:description"
-          content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
-    <meta property="og:image"
-          content="https://goldady.netlify.app/assets/images/logos/goldady-image.png">
+        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
+    <meta property="og:image" content="https://goldady.netlify.app/assets/images/logos/goldady-image.png">
 
     <!-- Twitter -->
-    <meta property="twitter:card"
-          content="summary_large_image">
-    <meta property="twitter:url"
-          content="https://goldady.netlify.app/dashboard.html">
-    <meta property="twitter:title"
-          content="Goldady - Dashboard">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://goldady.netlify.app/dashboard.html">
+    <meta property="twitter:title" content="Goldady - Dashboard">
     <meta property="twitter:description"
-          content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
-    <meta property="twitter:image"
-          content="https://goldady.netlify.app/assets/images/logos/goldady-image.png">
+        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
+    <meta property="twitter:image" content="https://goldady.netlify.app/assets/images/logos/goldady-image.png">
 
     <!-- ==== js ==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script defer
-            src="assets/js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/dashboard.js"></script>
 
     <!-- ==== font awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-            integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
-            crossorigin="anonymous"></script>
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 
     <!-- ==== bootstrap ==== -->
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"></script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 
-    <!-- ==== AOS ==== -->
-    <link rel="stylesheet"
-          href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- ==== fonts ==== -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet">
 
     <!-- ==== css ==== -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link rel="stylesheet"
-          href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
@@ -87,17 +66,14 @@
     <nav class="dashboard_nav">
         <div class="navigation_item">
             <div class="navigation_item-logo">
-                <img src="assets/images/logos/Goldady-logo.png"
-                     alt="Goldady">
+                <img src="assets/images/logos/Goldady-logo.png" alt="Goldady">
             </div>
             <div class="navigation_item-info">
                 <p class="navigation_item-page-name">My Dashboard</p> <span class="gold-separate"></span>
                 <p class="navigation_item-date">01/01/2020</p>
             </div>
             <div class="navigation_item-search-container">
-                <input class="navigation_item-search-input"
-                       type="text"
-                       name="search">
+                <input class="navigation_item-search-input" type="text" name="search">
                 <button class="navigation_item-search-button">
                     Advanced Search
                 </button>
@@ -107,25 +83,169 @@
             <div class="navigation_item-add"><i class="fas fa-plus"></i></div>
             <span class="gold-separate"></span>
             <div class="navigation_item-profile-container">
-                <img src="assets/images/avatar.png"
-                     alt="avatar">
+                <img src="assets/images/avatar.png" alt="avatar">
             </div>
-            <div id="registration_btn"
-                 class="navigation_menu">
+            <div id="registration_btn" class="navigation_menu">
                 <div class="navigation_menu-item"></div>
             </div>
         </div>
         <div class="search_bar_res">
             <div class="navigation_item-search-container">
-                <input class="navigation_item-search-input"
-                       type="text"
-                       name="search">
+                <input class="navigation_item-search-input" type="text" name="search">
                 <button class="navigation_item-search-button">
                     Advanced Search
                 </button>
             </div>
         </div>
     </nav>
+    <div id="activate-div" class="activate-container">
+        <div class="activate-container-info">
+            <div class="activate-container-icon activate-icon-info">
+                <i class="fas fa-info"></i>
+            </div>
+            <p class="activate-message"> Verify your account to make transactions on platform</p>
+        </div>
+        <div class="activate-container-action">
+            <button class="button-meduim button-white">Verify Account</button>
+            <div class="activate-container-icon activate-icon-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+    <main class="main-dashboard">
+        <div class="dashboard-col">
+            <div class="dashboard-box">
+                <div class="dashboard-box-title-container">
+                    <h3 class="dashboard-box-title heading-dashboard-box">Live Metal Prices</h3>
+                    <p class="green">Live Metal Prices &nbsp; <i class="fas fa-circle"></i></p>
+                </div>
+                <div class="dashboard-box-aside dashboard-material-box">
+                    <h3 class="dashboard-box-title">Gold</h3>
+                    <div class="matrial-prices-container">
+                        <div class="green dashboard-title-value">
+                            <p>Buy</p>
+                            <p><i class="upanddownicon fas fa-caret-up"></i> EGP 980.00</p>
+                        </div>
+
+                        <div class="red dashboard-title-value">
+                            <p>Sell</p>
+                            <p><i class="upanddownicon fas fa-caret-down"></i> EGP 480.00</p>
+                        </div>
+
+                        <div class="dashboard-title-value">
+                            <p>Daily Low/High</p>
+                            <p>EGP 960/990</p>
+                        </div>
+                        <div class="dashboard-title-value">
+                            <p>Daily Change</p>
+                            <p>EGP 5.0</p>
+                        </div>
+                        <div class="dashboard-title-value">
+                            <p>Daily Change % </p>
+                            <p>10%</p>
+                        </div>
+                    </div>
+                    <span class="matrial-box-tip gold">Daily Change = Difference from day before</span>
+                </div>
+                <div class="dashboard-box-aside dashboard-material-box">
+                    <h3 class="dashboard-box-title">Silver</h3>
+                    <div class="matrial-prices-container">
+                        <div class="green dashboard-title-value">
+                            <p>Buy</p>
+                            <p><i class="upanddownicon fas fa-caret-up"></i> EGP 980.00</p>
+                        </div>
+
+                        <div class="red dashboard-title-value">
+                            <p>Sell</p>
+                            <p><i class="upanddownicon fas fa-caret-down"></i> EGP 480.00</p>
+                        </div>
+
+                        <div class="dashboard-title-value">
+                            <p>Daily Low/High</p>
+                            <p>EGP 960/990</p>
+                        </div>
+                        <div class="dashboard-title-value">
+                            <p>Daily Change</p>
+                            <p>EGP 5.0</p>
+                        </div>
+                        <div class="dashboard-title-value">
+                            <p>Daily Change % </p>
+                            <p>10%</p>
+                        </div>
+                    </div>
+                    <span class="matrial-box-tip gold">Daily Change = Difference from day before</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dashboard-col">
+            <div class="dashboard-box">
+                <div class="dashboard-box-title-container">
+                    <h3 class="dashboard-box-title heading-dashboard-box">Instant Buy & Sell</h3>
+                </div>
+
+                <div class="dashboard-box-tabs-buttons">
+                    <button class="dashboard-box-tabs-button dashboard-box-tabs-button--active">Buy</button>
+                    <button class="dashboard-box-tabs-button">Sell</button>
+                </div>
+
+                <div>
+                    <div class="buy-form-container">
+                        <form id="buyForm" class="buy-dashboard" action="">
+                            <select name="typeOfMaterial" class="all-row dashboard-select">
+                                <option value="1">Gold</option>
+                                <option value="0">Silver</option>
+                            </select>
+                            <div class="all-row dashboard-input-container">
+                                <span class="dashboard-input-name">Qualtity:</span>
+                                <input type="text" class="dashboard-input" name="amount">
+                                <select name="amountUnit" class="amount-select-dashboard">
+                                    <option value="gm">gm</option>
+                                    <option value="kg">kg</option>
+                                </select>
+                            </div>
+
+                            <select class="dashboard-select">
+                                <option value="" selected hidden>Order Type</option>
+                                <option value="market">Market</option>
+                                <option value="limit">Limit</option>
+                            </select>
+                            <div class="dashboard-input-container">
+                                <span class="dashboard-input-name">price limit:</span>
+                                <input type="text" class="dashboard-input" name="priceLimit">
+                            </div>
+                            <div class="all-row dashboard-input-container">
+                                <select class="amount-select-dashboard">
+                                    <option value="1">valid till</option>
+                                </select>
+                                <input type="date" class="dashboard-input dashboard-input-time" name="">
+                            </div>
+                            <div class="all-row summary">
+                                <p>order value summary</p>
+                                <p>1000$</p>
+                            </div>
+                            <div class="all-row buttons-buysell-container">
+                                <button id="resetbuy" class="dashboard_button dashboard_button--aside">Reset</button>
+                                <button id="submitBuy"
+                                    class="dashboard_button dashboard_button--success">Preview</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-col">
+            <div class="dashboard-box">
+                <div class="dashboard-box-title-container">
+                    <h3 class="dashboard-box-title heading-dashboard-box">Price Charts: Gold </h3>
+                </div>
+                <div class="chart-container">
+                    <img src="assets/images/Group 2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <main class="main_dashboard">
         <div class="box buy-sell">
@@ -140,28 +260,7 @@
                         <span class="light-text light-text--bold">Total</span>
                         <span class="dashboard_heading--big">$23,758</span>
                     </div>
-                    <canvas class="border-dotted--gold margin-bottom-l chart"
-                            id="myChart"></canvas>
-                    <script>
-                        var ctx = document.getElementById('myChart').getContext('2d');
-                        var chart = new Chart(ctx, {
-                            type: 'line',
 
-                            data: {
-                                labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
-                                datasets: [{
-                                    label: "5 Days",
-                                    borderColor: '#b3892e',
-                                    data: [26.4, 39.8, 66.8, 66.4, 40.6, 55.2, 77.4, 69.8, 57.8, 76, 110.8, 142.6],
-                                }]
-                            },
-
-                            options: {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                            }
-                        });
-                    </script>
                     <div class="border-dotted--gold">
                         <div class="flex space-between">
                             <p>NET</p>
@@ -196,31 +295,24 @@
 
                                 <div class="sell-buy-input_container">
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label"
-                                               for="">Bullion</label>
-                                        <input class="dashboard_input"
-                                               type="text">
+                                        <label class="dashboard_label" for="">Bullion</label>
+                                        <input class="dashboard_input" type="text">
                                     </div>
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label"
-                                               for="">Order Size</label>
-                                        <input class="dashboard_input"
-                                               type="text">
+                                        <label class="dashboard_label" for="">Order Size</label>
+                                        <input class="dashboard_input" type="text">
                                         <span class="dashboard_input-aside-text">gm</span>
                                     </div>
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label"
-                                               for="">Price/Ounce</label>
-                                        <input class="dashboard_input"
-                                               type="text">
+                                        <label class="dashboard_label" for="">Price/Ounce</label>
+                                        <input class="dashboard_input" type="text">
                                         <span class="dashboard_input-aside-text">USD</span>
                                     </div>
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label green"
-                                               for=""><i class="fas fa-arrow-up"></i> 1267</label>
-                                        <input class="dashboard_button dashboard_button--success"
-                                               type="submit"
-                                               value="PLACE BUY ORDER">
+                                        <label class="dashboard_label green" for=""><i class="fas fa-arrow-up"></i>
+                                            1267</label>
+                                        <input class="dashboard_button dashboard_button--success" type="submit"
+                                            value="PLACE BUY ORDER">
                                     </div>
                                 </div>
                             </div>
@@ -230,31 +322,24 @@
 
                                 <div class="sell-buy-input_container">
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label"
-                                               for="">Bullion</label>
-                                        <input class="dashboard_input"
-                                               type="text">
+                                        <label class="dashboard_label" for="">Bullion</label>
+                                        <input class="dashboard_input" type="text">
                                     </div>
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label"
-                                               for="">Order Size</label>
-                                        <input class="dashboard_input"
-                                               type="text">
+                                        <label class="dashboard_label" for="">Order Size</label>
+                                        <input class="dashboard_input" type="text">
                                         <span class="dashboard_input-aside-text">gm</span>
                                     </div>
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label"
-                                               for="">Price/Ounce</label>
-                                        <input class="dashboard_input"
-                                               type="text">
+                                        <label class="dashboard_label" for="">Price/Ounce</label>
+                                        <input class="dashboard_input" type="text">
                                         <span class="dashboard_input-aside-text">USD</span>
                                     </div>
                                     <div class="dashboard_inputContainer">
-                                        <label class="dashboard_label red"
-                                               for=""><i class="fas fa-arrow-up"></i> 1267</label>
-                                        <input class="dashboard_button dashboard_button--fail"
-                                               type="submit"
-                                               value="PLACE SELL ORDER">
+                                        <label class="dashboard_label red" for=""><i class="fas fa-arrow-up"></i>
+                                            1267</label>
+                                        <input class="dashboard_button dashboard_button--fail" type="submit"
+                                            value="PLACE SELL ORDER">
                                     </div>
                                 </div>
                             </div>
@@ -369,10 +454,14 @@
                             <div class="flex space-between portfolio_container">
                                 <div class="portfolio_value-container">
                                     <div class="portfolio_value--heading_container">
-                                        <p class="portfolio_value portfolio_value--heading">Cash Account in $<span class="gold-separate"></span></p>
-                                        <p class="portfolio_value portfolio_value--heading">Gold Account in grams<span class="gold-separate"></span></p>
-                                        <p class="portfolio_value portfolio_value--heading">Averge Price/gm<span class="gold-separate"></span></p>
-                                        <p class="portfolio_value portfolio_value--heading">Price<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Cash Account in $<span
+                                                class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Gold Account in grams<span
+                                                class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Averge Price/gm<span
+                                                class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Price<span
+                                                class="gold-separate"></span></p>
                                         <p class="portfolio_value portfolio_value--heading">Total Cost</p>
                                     </div>
                                     <div class="portfolio_values_container">
@@ -385,20 +474,24 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <input class="dashboard_button dashboard_button--gold"
-                                           type="submit"
-                                           value="Fund Account">
+                                    <input class="dashboard_button dashboard_button--gold" type="submit"
+                                        value="Fund Account">
                                 </div>
                             </div>
                             <h2 class="dashboard_heading dashboard_heading--small">Transaction history</h2>
                             <div class="portfolio_container">
                                 <div class="portfolio_value-container">
                                     <div class="transaction_value--heading_container">
-                                        <p class="portfolio_value portfolio_value--heading">Date<span class="gold-separate"></span></p>
-                                        <p class="portfolio_value portfolio_value--heading">Purchase or Sale<span class="gold-separate"></span></p>
-                                        <p class="portfolio_value portfolio_value--heading">in grams<span class="gold-separate"></span></p>
-                                        <p class="portfolio_value portfolio_value--heading">Price/gm<span class="gold-separate"></span></p>
-                                        <p class="portfolio_value portfolio_value--heading">Cash<span class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Date<span
+                                                class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Purchase or Sale<span
+                                                class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">in grams<span
+                                                class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Price/gm<span
+                                                class="gold-separate"></span></p>
+                                        <p class="portfolio_value portfolio_value--heading">Cash<span
+                                                class="gold-separate"></span></p>
                                         <p class="portfolio_value portfolio_value--heading">Amount</p>
                                     </div>
                                     <div class="transaction_values_container">
@@ -763,37 +856,7 @@
                 <div class="dashboard_col">
                     <h2 class="dashboard_heading dashboard_heading--gold">Live Market Board</h2>
                     <div class="dashboard_col-body">
-                        <canvas id="myChart1"></canvas>
-                        <script>
-                            var ctx = document.getElementById('myChart1').getContext('2d');
-                            var chart = new Chart(ctx, {
-                                type: 'line',
 
-                                data: {
-                                    labels: ["Sep 1", "Sep 2", "Sep 3", "Sep 4", "Sep 5", "Sep 6", "Sep 7", "Sep 8", "Sep 9", "Sep 10"],
-                                    datasets: [{
-                                        label: "5 Days",
-                                        backgroundColor: "#b3892e10",
-                                        borderColor: '#b3892e',
-                                        borderWidth: 1,
-                                        data: [0, 45, 68, 69, 12, 36, 47, 25, 37, 78],
-                                    }]
-                                },
-
-                                options: {
-                                    responsive: true,
-                                    maintainAspectRatio: false,
-                                    elements: {
-                                        line: {
-                                            tension: 0
-                                        },
-                                        point: {
-                                            radius: 0
-                                        }
-                                    }
-                                }
-                            });
-                        </script>
                     </div>
                 </div>
                 <div class="dashboard_col">
@@ -801,41 +864,7 @@
                     <div class="dashboard_col-body">
                         <div class="total_trans">
 
-                            <div class="chart-container"
-                                 style="position: relative;  width:99% !important; height: 100% !important;">
-                                <canvas id="myChart2"></canvas>
-                            </div>
-                            <script>
-                                var ctx = document.getElementById('myChart2').getContext('2d');
-                                ctx.canvas.parentNode.style.width = '99%';
-                                var chart = new Chart(ctx, {
-                                    type: 'line',
 
-                                    data: {
-                                        labels: ["Sep 1", "Sep 2", "Sep 3", "Sep 4", "Sep 5", "Sep 6", "Sep 7", "Sep 8", "Sep 9", "Sep 10"],
-                                        datasets: [{
-                                            label: "5 Days",
-                                            backgroundColor: "#b3892e10",
-                                            borderColor: '#b3892e',
-                                            borderWidth: 1,
-                                            data: [0, 45, 68, 69, 12, 36, 47, 25, 37, 78],
-                                        }]
-                                    },
-
-                                    options: {
-                                        // responsive: true,
-                                        // maintainAspectRatio: false,
-                                        elements: {
-                                            line: {
-                                                tension: 0.4
-                                            },
-                                            point: {
-                                                radius: 1
-                                            }
-                                        }
-                                    }
-                                });
-                            </script>
                             <div class="report">
                                 <h3 class="repost_heading">Report</h3>
                                 <div class="report_status">
@@ -844,7 +873,7 @@
                                         <h1 class="report_number">+29.7%</h1>
                                         <div class="progress_bar">
                                             <div class="progress_bar-content progress_bar-content--gain"
-                                                 style="width: 29.7%;">
+                                                style="width: 29.7%;">
                                             </div>
                                         </div>
                                     </div>
@@ -854,7 +883,7 @@
                                         <h1 class="report_number">-19.7%</h1>
                                         <div class="progress_bar">
                                             <div class="progress_bar-content progress_bar-content--lose"
-                                                 style="width: 19.7%;">
+                                                style="width: 19.7%;">
                                             </div>
                                         </div>
                                     </div>
@@ -886,6 +915,10 @@
     <footer class="dashboard_footer">
         <p>© 2019 Goldady Investments Ltd. All Rights Reserved.</p>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
 </body>
 
 </html>
