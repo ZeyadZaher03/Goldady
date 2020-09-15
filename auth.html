@@ -75,6 +75,28 @@
     </nav>
 
     <main class="main-navigation">
+        <form id="login_form">
+            <div class="authentication_box">
+                <h3 class="authentication_title heading-medium">Register</h3>
+                <div class="authentication_form">
+                    <div id="email" class="input-reg-container">
+                        <input class="input-reg" placeholder="Email" name="email" type="email" />
+                        <span class="input-reg-error">email is invalid</span>
+                        <span class="input-reg-tip"></span>
+                    </div>
+
+                    <div id="password" class="input-reg-container">
+                        <input class="input-reg" placeholder="Password" name="password" type="password" />
+                        <span class="input-reg-tip">Password must be 8 or more characters</span>
+                        <span class="input-reg-error">password is invalid</span>
+                        <div class="input-reg-measuer"></div>
+                    </div>
+
+
+                    <button id="loginButton" class="input-reg-button">login</button>
+                </div>
+        </form>
+
         <form id="register_form">
             <div class="authentication_box">
                 <h3 class="authentication_title heading-medium">Register</h3>

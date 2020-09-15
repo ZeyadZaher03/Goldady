@@ -1,3 +1,35 @@
+auth.onAuthStateChanged((user) => {
+  if (user && Cookies.get("logedin") == true) {
+    return window.location.replace("dashboard.html");
+  }
+});
+
+
+const login = () => {
+  const loginForm = document.querySelector("#login_form");
+  const loginFormButton = document.querySelector("#loginButton");
+
+  const emailEle = loginForm["email"];
+  const passwordEle = loginForm["password"];
+
+  loginForm.addEventListener("submit", (e) => e.preventDefault());
+  loginFormButton.addEventListener("click", (e) => {
+    auth
+      .signInWithEmailAndPassword(emailEle.value.trim(), passwordEle.value.trim())
+      .then((cred) => {
+        const uid = cred.user.uid;
+        Cookies.set("logedin", true)
+        location.href = "dashboard.html"
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+};
+login()
+
+
+
 const register = () => {
   const registerForm = document.querySelector("#register_form");
   const registerFormButton = document.querySelector("#registerButton");
@@ -47,9 +79,9 @@ const register = () => {
     };
 
     const verifyPassword = () => {
-      const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9,a-z,A-Z,_]{8,}$/;
+      // const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9,a-z,A-Z,_]{8,}$/;
       if (!passwordEle.value) errorMessage(passwordEle, "Password is Required");
-      else if (!passwordEle.value.match(passwordRegex)) {
+      else if (passwordEle.value.length >= 8) {
         errorMessage(passwordEle, "Password Must be 8 or more Characters containing (numbers,lowerCase,upperCase)");
         registerValidation.password = false;
       }
@@ -94,6 +126,8 @@ const register = () => {
       lastName: lastNameEle.value,
       email: emailEle.value,
       activated: false,
+      gold: 0,
+      balance: 20,
     };
 
     return {
@@ -108,7 +142,7 @@ const register = () => {
     const {
       registerValidation,
       userInfo,
-      password
+      password,
     } = runRegister();
 
     let isDataValid = false;
@@ -127,8 +161,9 @@ const register = () => {
         Cookies.set("uid", uid, {
           expires: 30,
         });
-
+        Cookies.set("logedin", true)
         db.ref(`users/${uid}`).set(userInfo);
+        location.href = "dashboard.html"
       })
       .catch((err) => {
         console.log(err);
