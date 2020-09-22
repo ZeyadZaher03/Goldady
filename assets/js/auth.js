@@ -40,10 +40,9 @@ const login = () => {
         const uid = cred.user.uid;
         Cookies.set("logedin", true)
         location.href = "dashboard.html"
+        showTopSuccessMessage("redirecting to the dashboard")
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => showTopErrorMessage(err.message));
   });
 };
 login()
@@ -182,14 +181,14 @@ const register = () => {
         });
         Cookies.set("logedin", true)
         db.ref(`users/${uid}`).set(userInfo);
+        showTopSuccessMessage("account created successfully, redirecting to the dashboard")
         location.href = "dashboard.html"
       })
       .catch((err) => {
-        console.log(err);
+        showTopErrorMessage(err.message)
       });
   });
 };
 
-// export const login = () => {};
 
 register()

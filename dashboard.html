@@ -61,8 +61,8 @@
 </head>
 
 <body class="dashboard-body">
-    <div class="top-card-message top-card-message--error">Some thing went Wronge Please try Again</div>
-    <div class="side-card-message side-card-message--error">Some thing went Wronge Please try Again</div>
+    <div class="top-card-message">Some thing went Wronge Please try Again</div>
+    <div class="side-card-message">Some thing went Wronge Please try Again</div>
     <nav class="dashboard_nav">
         <div class="navigation_item">
             <div class="navigation_item-logo">
@@ -264,10 +264,11 @@
                                     class="dashboard_button dashboard_button--success">Preview</button>
                             </div>
                         </form>
+
                         <form id="sellForm" class="buy-dashboard" action="">
                             <select name="typeOfMaterial" class="all-row dashboard-select">
-                                <option value="1">Gold</option>
-                                <option value="0">Silver</option>
+                                <option value="gold">Gold</option>
+                                <option value="silver">Silver</option>
                             </select>
                             <div class="all-row dashboard-input-container">
                                 <span class="dashboard-input-name">Qualtity:</span>
@@ -295,11 +296,11 @@
                             </div>
                             <div class="all-row summary">
                                 <p>order value summary</p>
-                                <p>1000$</p>
+                                <p id="orderValueSummarySell">1000$</p>
                             </div>
                             <div class="all-row buttons-buysell-container">
-                                <button id="resetbuy" class="dashboard_button dashboard_button--aside">Reset</button>
-                                <button id="submitBuy"
+                                <button id="resetsell" class="dashboard_button dashboard_button--aside">Reset</button>
+                                <button id="submisell"
                                     class="dashboard_button dashboard_button--success">Preview</button>
                             </div>
                         </form>
@@ -318,7 +319,7 @@
                         <span>Start a plan</span>
                     </div>
                 </div>
-                <form id="buyForm" class="buy-dashboard" action="">
+                <form id="buyFom" class="buy-dashboard" action="">
                     <div class="all-row dashboard-input-container">
                         <span class="dashboard-input-name">Qualtity:</span>
                         <input type="text" class="dashboard-input" name="amount" />
@@ -348,8 +349,8 @@
                         <p>1000$</p>
                     </div>
                     <div class="all-row buttons-buysell-container">
-                        <button id="resetbuy" class="dashboard_button dashboard_button--aside">Reset</button>
-                        <button id="submitBuy" class="dashboard_button dashboard_button--success">Preview</button>
+                        <button id="resebuy" class="dashboard_button dashboard_button--aside">Reset</button>
+                        <button id="submtBuy" class="dashboard_button dashboard_button--success">Preview</button>
                     </div>
                 </form>
             </div>
@@ -414,6 +415,8 @@
                 </div>
             </div>
         </div>
+
+        <a id="signout" href="#">signout</a>
     </main>
 
     <!-- <main class="main_dashboard">
