@@ -1,12 +1,32 @@
+const loginForm = document.querySelector("#login_form");
+const registerForm = document.querySelector("#register_form");
+
 auth.onAuthStateChanged((user) => {
   if (user && Cookies.get("logedin") == true) {
     return window.location.replace("dashboard.html");
   }
 });
 
-
+const openRegister = () => {
+  const registerOpenButton = document.querySelector("#openRegister")
+  registerOpenButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    loginForm.style.display = "none"
+    registerForm.style.display = "grid"
+  })
+}
+const openLogin = () => {
+  const registerOpenButton = document.querySelector("#openLogin")
+  registerOpenButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    loginForm.style.display = "grid"
+    registerForm.style.display = "none"
+  })
+}
+openRegister()
+openLogin()
 const login = () => {
-  const loginForm = document.querySelector("#login_form");
+
   const loginFormButton = document.querySelector("#loginButton");
 
   const emailEle = loginForm["email"];
@@ -31,7 +51,6 @@ login()
 
 
 const register = () => {
-  const registerForm = document.querySelector("#register_form");
   const registerFormButton = document.querySelector("#registerButton");
 
   const fristNameEle = registerForm["firstName"];

@@ -1725,7 +1725,13 @@ b {
   border-radius: 5px;
   border: 1px solid var(--color-main);
   padding: 1rem 2rem;
+  transition: all 200ms ease;
 }
+
+.dashboard-col .dashboard-box:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 
 .dashboard-box-title {
   font-size: 2rem;
@@ -1815,6 +1821,23 @@ b {
   background-color: var(--color-main-light-1);
 }
 
+
+.dashboard-box-tabs-button:focus {
+  outline: none;
+}
+
+.dashboard-box-tabs-button:active,
+.dashboard-box-tabs-button:hover {
+  background-color: #383838;
+  color: #9d9d9d;
+}
+
+.dashboard-box-tabs-button--active:active,
+.dashboard-box-tabs-button--active:hover {
+  background-color: #666666;
+  color: #fff
+}
+
 .dashboard-select {
   padding: 1rem;
   width: 100%;
@@ -1861,7 +1884,7 @@ b {
 }
 
 .amount-select-dashboard {
-  background: transparent;
+  background: #111111;
   color: #fff;
   border: 0;
 }
@@ -1923,4 +1946,179 @@ b {
 .dashboard-col {
   display: flex;
   flex-direction: column;
+}
+
+#register_form {
+  display: none;
+}
+
+
+.auth-create {
+  color: var(--color-main-light-1);
+  font-size: 1.2em;
+  text-decoration: underline;
+  grid-column: 1/3;
+  text-align: center;
+  justify-self: left;
+  margin-top: 1rem;
+}
+
+.auth-create:hover {
+  color: var(--color-main);
+}
+
+.top-card-message {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8rem;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  padding: 1.5rem;
+  background-color: rgba(80, 80, 80, 0.8);
+  overflow: hidden;
+  z-index: 9;
+  display: none;
+}
+
+.top-card-message--succ {
+  border-left: 7px solid var(--success-color);
+}
+
+.top-card-message--error {
+  border-left: 7px solid var(--fail-color);
+}
+
+.side-card-message {
+  position: fixed;
+  display: none;
+  left: 3rem;
+  bottom: 2rem;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  padding: 1.5rem;
+  background-color: rgba(80, 80, 80, 0.8);
+  overflow: hidden;
+}
+
+.side-card-message--succ {
+  border-left: 7px solid var(--success-color);
+}
+
+.side-card-message--error {
+  border-left: 7px solid var(--fail-color);
+}
+
+#sellForm {
+  display: none;
+}
+
+.account-balanceMenu {
+  font-size: 3rem;
+  color: var(--color-main);
+  cursor: pointer;
+}
+
+.cash-balance-aside-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cash-balance-aside-title {
+  font-size: 1.6rem;
+}
+
+.cash-balance-aside-value {
+  justify-self: right;
+  margin-bottom: 0;
+}
+
+.cash-balance-aside-container:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.cash-balance-mat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.2rem;
+  grid-column-gap: 1rem;
+}
+
+.cash-balance-mat-row .cash-balance-mat-title {
+  color: var(--color-main);
+}
+
+.start-plan-button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.1em;
+}
+
+.start-plan-icon-container {
+  background-color: var(--success-color);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.start-plan-icon {
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 2px;
+  font-size: 2.5rem;
+}
+
+.orders-titles-container {
+  display: flex;
+}
+
+.orders-titles-container>* {
+  flex: 1
+}
+
+.orders-title {
+  font-size: 1.4rem;
+  border: 1px solid #979797;
+  margin: 1rem;
+  padding: 1px 5px;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+.orders-item {
+  display: flex;
+}
+
+.orders-item>* {
+  flex: 1;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.silver {
+  color: silver;
+}
+
+.orders-item-metal {
+  text-transform: capitalize;
+}
+
+.orders-item-number--ask {
+  color: var(--fail-color);
+}
+
+.orders-item-number--bid {
+  color: var(--success-color);
+}
+
+.orders-item-date {
+  color: #fff;
 }

@@ -3,30 +3,30 @@
 
 <head>
     <!-- ==== general ==== -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/logos/logo.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/logos/logo.png" type="image/x-icon" />
     <!-- Primary Meta Tags -->
     <title>Goldady - Dashboard</title>
-    <meta name="title" content="Goldady - Dashboard">
+    <meta name="title" content="Goldady - Dashboard" />
     <meta name="description"
-        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
+        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing." />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://goldady.netlify.app/dashboard.html">
-    <meta property="og:title" content="Goldady - Dashboard">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://goldady.netlify.app/dashboard.html" />
+    <meta property="og:title" content="Goldady - Dashboard" />
     <meta property="og:description"
-        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
-    <meta property="og:image" content="https://goldady.netlify.app/assets/images/logos/goldady-image.png">
+        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing." />
+    <meta property="og:image" content="https://goldady.netlify.app/assets/images/logos/goldady-image.png" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://goldady.netlify.app/dashboard.html">
-    <meta property="twitter:title" content="Goldady - Dashboard">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://goldady.netlify.app/dashboard.html" />
+    <meta property="twitter:title" content="Goldady - Dashboard" />
     <meta property="twitter:description"
-        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing.">
-    <meta property="twitter:image" content="https://goldady.netlify.app/assets/images/logos/goldady-image.png">
+        content="At Goldady, we are seizing the historic opportunity to modernize gold trading and investing." />
+    <meta property="twitter:image" content="https://goldady.netlify.app/assets/images/logos/goldady-image.png" />
 
     <!-- ==== js ==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
@@ -41,7 +41,7 @@
 
     <!-- ==== bootstrap ==== -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -52,38 +52,37 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
 
-
     <!-- ==== fonts ==== -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet" />
 
     <!-- ==== css ==== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link rel="stylesheet" href="/assets/css/style.css">
-
+    <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
 <body class="dashboard-body">
+    <div class="top-card-message top-card-message--error">Some thing went Wronge Please try Again</div>
+    <div class="side-card-message side-card-message--error">Some thing went Wronge Please try Again</div>
     <nav class="dashboard_nav">
         <div class="navigation_item">
             <div class="navigation_item-logo">
-                <img src="assets/images/logos/Goldady-logo.png" alt="Goldady">
+                <img src="assets/images/logos/Goldady-logo.png" alt="Goldady" />
             </div>
             <div class="navigation_item-info">
-                <p class="navigation_item-page-name">My Dashboard</p> <span class="gold-separate"></span>
+                <p class="navigation_item-page-name">My Dashboard</p>
+                <span class="gold-separate"></span>
                 <p class="navigation_item-date">01/01/2020</p>
             </div>
             <div class="navigation_item-search-container">
-                <input class="navigation_item-search-input" type="text" name="search">
-                <button class="navigation_item-search-button">
-                    Advanced Search
-                </button>
+                <input class="navigation_item-search-input" type="text" name="search" />
+                <button class="navigation_item-search-button">Advanced Search</button>
             </div>
         </div>
         <div class="navigation_item">
             <div class="navigation_item-add"><i class="fas fa-plus"></i></div>
             <span class="gold-separate"></span>
             <div class="navigation_item-profile-container">
-                <img src="assets/images/avatar.png" alt="avatar">
+                <img src="assets/images/avatar.png" alt="avatar" />
             </div>
             <div id="registration_btn" class="navigation_menu">
                 <div class="navigation_menu-item"></div>
@@ -91,10 +90,8 @@
         </div>
         <div class="search_bar_res">
             <div class="navigation_item-search-container">
-                <input class="navigation_item-search-input" type="text" name="search">
-                <button class="navigation_item-search-button">
-                    Advanced Search
-                </button>
+                <input class="navigation_item-search-input" type="text" name="search" />
+                <button class="navigation_item-search-button">Advanced Search</button>
             </div>
         </div>
     </nav>
@@ -103,7 +100,7 @@
             <div class="activate-container-icon activate-icon-info">
                 <i class="fas fa-info"></i>
             </div>
-            <p class="activate-message"> Verify your account to make transactions on platform</p>
+            <p class="activate-message">Verify your account to make transactions on platform</p>
         </div>
         <div class="activate-container-action">
             <button class="button-meduim button-white">Verify Account</button>
@@ -141,7 +138,7 @@
                             <p>EGP 5.0</p>
                         </div>
                         <div class="dashboard-title-value">
-                            <p>Daily Change % </p>
+                            <p>Daily Change %</p>
                             <p>10%</p>
                         </div>
                     </div>
@@ -169,15 +166,51 @@
                             <p>EGP 5.0</p>
                         </div>
                         <div class="dashboard-title-value">
-                            <p>Daily Change % </p>
+                            <p>Daily Change %</p>
                             <p>10%</p>
                         </div>
                     </div>
                     <span class="matrial-box-tip gold">Daily Change = Difference from day before</span>
                 </div>
-
+            </div>
+            <div class="dashboard-box">
+                <div class="dashboard-box-title-container">
+                    <h3 class="dashboard-box-title heading-dashboard-box">Account Balance</h3>
+                    <i class="account-balanceMenu fas fa-bars"></i>
+                </div>
+                <div class="dashboard-box-aside cash-balance-aside-container">
+                    <p class="cash-balance-aside-title">Cash Balance</p>
+                    <h2 class="cash-balance-aside-value" id="account-cash-balance">EGP 23,054</h2>
+                </div>
+                <div class="dashboard-box-aside cash-balance-aside-container">
+                    <p class="cash-balance-aside-title">Gold Balance</p>
+                    <div class="cash-balance-aside-value cash-balance-material-box">
+                        <div class="cash-balance-mat-row">
+                            <div class="cash-balance-mat-title">Value</div>
+                            <div class="cash-balance-mat-value" id="account-gold-price">12,120</div>
+                            <div class="cash-balance-mat-title">Qualtity</div>
+                            <div class="cash-balance-mat-value" id="account-gold-amount">10kg</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-box-aside cash-balance-aside-container">
+                    <p class="cash-balance-aside-title">Silver Balance</p>
+                    <div class="cash-balance-aside-value cash-balance-material-box">
+                        <div class="cash-balance-mat-row">
+                            <div class="cash-balance-mat-title">Value</div>
+                            <div class="cash-balance-mat-value" id="account-silver-price">12,120</div>
+                            <div class="cash-balance-mat-title">Qualtity</div>
+                            <div class="cash-balance-mat-value" id="account-silver-amount">10kg</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-box-aside cash-balance-aside-container">
+                    <p class="cash-balance-aside-title">Portfolio Value</p>
+                    <h2 class="cash-balance-aside-value" id="account-portfolio-net-value">EGP 78,054</h2>
+                </div>
             </div>
         </div>
+
         <div class="dashboard-col">
             <div class="dashboard-box">
                 <div class="dashboard-box-title-container">
@@ -185,20 +218,21 @@
                 </div>
 
                 <div class="dashboard-box-tabs-buttons">
-                    <button class="dashboard-box-tabs-button dashboard-box-tabs-button--active">Buy</button>
-                    <button class="dashboard-box-tabs-button">Sell</button>
+                    <button id="buyButtonTab"
+                        class="dashboard-box-tabs-button dashboard-box-tabs-button--active">Buy</button>
+                    <button id="sellButtonTab" class="dashboard-box-tabs-button">Sell</button>
                 </div>
 
                 <div>
                     <div class="buy-form-container">
                         <form id="buyForm" class="buy-dashboard" action="">
                             <select name="typeOfMaterial" class="all-row dashboard-select">
-                                <option value="1">Gold</option>
-                                <option value="0">Silver</option>
+                                <option value="gold">Gold</option>
+                                <option value="silver">Silver</option>
                             </select>
                             <div class="all-row dashboard-input-container">
                                 <span class="dashboard-input-name">Qualtity:</span>
-                                <input type="text" class="dashboard-input" name="amount">
+                                <input type="text" autocomplete="off" class="dashboard-input" name="amount" />
                                 <select name="amountUnit" class="amount-select-dashboard">
                                     <option value="gm">gm</option>
                                     <option value="kg">kg</option>
@@ -212,13 +246,52 @@
                             </select>
                             <div class="dashboard-input-container">
                                 <span class="dashboard-input-name">price limit:</span>
-                                <input type="text" class="dashboard-input" name="priceLimit">
+                                <input type="text" autocomplete="off" class="dashboard-input" name="priceLimit" />
                             </div>
                             <div class="all-row dashboard-input-container">
                                 <select class="amount-select-dashboard">
                                     <option value="1">valid till</option>
                                 </select>
-                                <input type="date" class="dashboard-input dashboard-input-time" name="">
+                                <input type="date" class="dashboard-input dashboard-input-time" name="" />
+                            </div>
+                            <div class="all-row summary">
+                                <p>order value summary</p>
+                                <p id="orderValueSummary">1000$</p>
+                            </div>
+                            <div class="all-row buttons-buysell-container">
+                                <button id="resetbuy" class="dashboard_button dashboard_button--aside">Reset</button>
+                                <button id="submitBuy"
+                                    class="dashboard_button dashboard_button--success">Preview</button>
+                            </div>
+                        </form>
+                        <form id="sellForm" class="buy-dashboard" action="">
+                            <select name="typeOfMaterial" class="all-row dashboard-select">
+                                <option value="1">Gold</option>
+                                <option value="0">Silver</option>
+                            </select>
+                            <div class="all-row dashboard-input-container">
+                                <span class="dashboard-input-name">Qualtity:</span>
+                                <input type="text" class="dashboard-input" name="amount" />
+                                <select name="amountUnit" class="amount-select-dashboard">
+                                    <option value="gm">gm</option>
+                                    <option value="kg">kg</option>
+                                </select>
+                            </div>
+
+                            <select class="dashboard-select">
+                                <option value="" selected hidden>Order Type</option>
+                                <option value="market">Market</option>
+                                <option value="limit">Limit</option>
+                            </select>
+                            <div class="dashboard-input-container">
+                                <span class="dashboard-input-name">price limit:</span>
+                                <input type="text" class="dashboard-input" name="priceLimit" />
+                            </div>
+                            <div class="all-row dashboard-input-container">
+                                <select class="amount-select-dashboard">
+                                    <option value="1">valid till</option>
+                                </select>
+                                <input type="date" class="dashboard-input dashboard-input-time" name="" />
                             </div>
                             <div class="all-row summary">
                                 <p>order value summary</p>
@@ -233,21 +306,117 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="dashboard-col">
+
             <div class="dashboard-box">
                 <div class="dashboard-box-title-container">
-                    <h3 class="dashboard-box-title heading-dashboard-box">Price Charts: Gold </h3>
+                    <h3 class="dashboard-box-title heading-dashboard-box">Savings plan</h3>
+
+                    <div class="green start-plan-button">
+                        <div class="start-plan-icon-container">
+                            <i class="start-plan-icon fas fa-plus"></i>
+                        </div>
+                        <span>Start a plan</span>
+                    </div>
                 </div>
-                <div class="chart-container">
-                    <img src="assets/images/Group 2.png" alt="">
-                </div>
+                <form id="buyForm" class="buy-dashboard" action="">
+                    <div class="all-row dashboard-input-container">
+                        <span class="dashboard-input-name">Qualtity:</span>
+                        <input type="text" class="dashboard-input" name="amount" />
+                        <select name="amountUnit" class="amount-select-dashboard">
+                            <option value="gm">gm</option>
+                            <option value="kg">kg</option>
+                        </select>
+                    </div>
+
+                    <select class="dashboard-select">
+                        <option value="" selected hidden>Order Type</option>
+                        <option value="market">Market</option>
+                        <option value="limit">Limit</option>
+                    </select>
+                    <div class="dashboard-input-container">
+                        <span class="dashboard-input-name">price limit:</span>
+                        <input type="text" class="dashboard-input" name="priceLimit" />
+                    </div>
+                    <div class="all-row dashboard-input-container">
+                        <select class="amount-select-dashboard">
+                            <option value="1">valid till</option>
+                        </select>
+                        <input type="date" class="dashboard-input dashboard-input-time" name="" />
+                    </div>
+                    <div class="all-row summary">
+                        <p>order value summary</p>
+                        <p>1000$</p>
+                    </div>
+                    <div class="all-row buttons-buysell-container">
+                        <button id="resetbuy" class="dashboard_button dashboard_button--aside">Reset</button>
+                        <button id="submitBuy" class="dashboard_button dashboard_button--success">Preview</button>
+                    </div>
+                </form>
             </div>
         </div>
 
+        <div class="dashboard-col">
+            <div class="dashboard-box">
+                <div class="dashboard-box-title-container">
+                    <h3 class="dashboard-box-title heading-dashboard-box">Price Charts: Gold</h3>
+                </div>
+                <div class="chart-container">
+                    <img src="assets/images/Group 2.png" alt="" />
+                </div>
+            </div>
+
+            <div class="dashboard-box">
+                <div class="dashboard-box-title-container">
+                    <h3 class="dashboard-box-title heading-dashboard-box">My Open Orders</h3>
+                    <i class="account-balanceMenu fas fa-bars"></i>
+                </div>
+                <div class="dashboard-box-container">
+                    <div class="orders-titles-container">
+                        <div class="orders-title">Metal</div>
+                        <div class="orders-title">Quantity</div>
+                        <div class="orders-title"><span class="green">Bid</span>/<span class="red">Ask</span></div>
+                        <div class="orders-title">End Date</div>
+                    </div>
+                    <div class="orders-container">
+                        <div class="orders-item gold">
+                            <div class="orders-item-metal">Gold</div>
+                            <div class="orders-item-quantity">54gm</div>
+                            <div class="orders-item-number orders-item-number--bid">416</div>
+                            <div class="orders-item-date">10/9/2020</div>
+                        </div>
+                        <div class="orders-item gold">
+                            <div class="orders-item-metal">Gold</div>
+                            <div class="orders-item-quantity">54gm</div>
+                            <div class="orders-item-number orders-item-number--bid">416</div>
+                            <div class="orders-item-date">10/9/2020</div>
+                        </div>
+                        <div class="orders-item silver">
+                            <div class="orders-item-metal">silver</div>
+                            <div class="orders-item-quantity">54gm</div>
+                            <div class="orders-item-number orders-item-number--ask">416</div>
+                            <div class="orders-item-date">10/9/2020</div>
+                        </div>
+                        <div class="orders-item silver">
+                            <div class="orders-item-metal">silver</div>
+                            <div class="orders-item-quantity">54gm</div>
+                            <div class="orders-item-number orders-item-number--bid">416</div>
+                            <div class="orders-item-date">10/9/2020</div>
+                        </div>
+                        <div class="orders-item gold">
+                            <div class="orders-item-metal">Gold</div>
+                            <div class="orders-item-quantity">54gm</div>
+                            <div class="orders-item-number orders-item-number--ask">416</div>
+                            <div class="orders-item-date">10/9/2020</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </main>
 
-    <main class="main_dashboard">
+    <!-- <main class="main_dashboard">
         <div class="box buy-sell">
             <div class="box_contaier account-balance dashboard_col">
                 <h2 class="dashboard_heading">Account Balance</h2>
@@ -910,11 +1079,11 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main> -->
 
-    <footer class="dashboard_footer">
+    <!-- <footer class="dashboard_footer">
         <p>© 2019 Goldady Investments Ltd. All Rights Reserved.</p>
-    </footer>
+    </footer> -->
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
